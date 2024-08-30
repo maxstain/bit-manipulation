@@ -1,0 +1,9 @@
+# ninja log v5
+5	305	7467335597456958	CMakeFiles/bit_manipulations.dir/main.c.obj	71e8701982ba042d
+306	790	7467335602165756	bit_manipulations.exe	2416ee5ebd84d1b2
+3	870	7467342866081470	build.ninja	9fdfcdc44a4c4f37
+161	619	7467348107686165	CMakeFiles/bit_manipulations.dir/Motor/motor_init.c.obj	ccd96b700ee00c26
+66	621	7467348107741461	CMakeFiles/bit_manipulations.dir/Motor/check_motor_fault.c.obj	860733de6583de4c
+7	635	7467348107870411	CMakeFiles/bit_manipulations.dir/main.c.obj	71e8701982ba042d
+109	641	7467348108003463	CMakeFiles/bit_manipulations.dir/Motor/display_motor_info.c.obj	496c95d40734d748
+641	1361	7467348114865563	bit_manipulations.exe	14a0a400448d7146

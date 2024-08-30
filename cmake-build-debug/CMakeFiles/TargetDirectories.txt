@@ -1,0 +1,3 @@
+C:/Projects/C/bit_manipulations/cmake-build-debug/CMakeFiles/bit_manipulations.dir
+C:/Projects/C/bit_manipulations/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Projects/C/bit_manipulations/cmake-build-debug/CMakeFiles/rebuild_cache.dir
