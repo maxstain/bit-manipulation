@@ -73,6 +73,12 @@ build CMakeFiles/bit_manipulations.dir/Motor/motor_init.c.obj: C_COMPILER__bit_m
   OBJECT_DIR = CMakeFiles\bit_manipulations.dir
   OBJECT_FILE_DIR = CMakeFiles\bit_manipulations.dir\Motor
 
+build CMakeFiles/bit_manipulations.dir/Motor/manage_faults.c.obj: C_COMPILER__bit_manipulations_unscanned_Debug C$:/Projects/C/bit_manipulations/Motor/manage_faults.c || cmake_object_order_depends_target_bit_manipulations
+  DEP_FILE = CMakeFiles\bit_manipulations.dir\Motor\manage_faults.c.obj.d
+  FLAGS = -g -std=gnu2x -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\bit_manipulations.dir
+  OBJECT_FILE_DIR = CMakeFiles\bit_manipulations.dir\Motor
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target bit_manipulations
@@ -81,7 +87,7 @@ build CMakeFiles/bit_manipulations.dir/Motor/motor_init.c.obj: C_COMPILER__bit_m
 #############################################
 # Link the executable bit_manipulations.exe
 
-build bit_manipulations.exe: C_EXECUTABLE_LINKER__bit_manipulations_Debug CMakeFiles/bit_manipulations.dir/main.c.obj CMakeFiles/bit_manipulations.dir/Motor/check_motor_fault.c.obj CMakeFiles/bit_manipulations.dir/Motor/display_motor_info.c.obj CMakeFiles/bit_manipulations.dir/Motor/motor_init.c.obj
+build bit_manipulations.exe: C_EXECUTABLE_LINKER__bit_manipulations_Debug CMakeFiles/bit_manipulations.dir/main.c.obj CMakeFiles/bit_manipulations.dir/Motor/check_motor_fault.c.obj CMakeFiles/bit_manipulations.dir/Motor/display_motor_info.c.obj CMakeFiles/bit_manipulations.dir/Motor/motor_init.c.obj CMakeFiles/bit_manipulations.dir/Motor/manage_faults.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\bit_manipulations.dir

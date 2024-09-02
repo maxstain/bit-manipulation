@@ -17,4 +17,5 @@ void display_motor_info(tu_Motor motor) {
 	printf_s("Voltage:          %d%%\n", motor.u_bit.s_voltage);
 	printf_s("Current:          %d%%\n", motor.u_bit.s_current);
 	printf_s("Temperature:      %d%%\n", motor.u_bit.s_temp);
+	printf_s("Speed:            %d%%\n", motor.u_bit.s_speed);
 }

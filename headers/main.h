@@ -14,12 +14,21 @@
 #include "motor_init.h"
 
 // Constants
-#define MAX_VOLTAGE 100
-#define MAX_CURRENT 100
-#define MAX_TEMP 100
-#define MIN_VOLTAGE 0
-#define MIN_CURRENT 0
-#define MIN_TEMP 0
+#define MAX_VOLTAGE ((uint32_t)100UL)
+#define MAX_CURRENT ((uint32_t)100UL)
+#define MAX_TEMP ((uint32_t)100UL)
+#define MIN_VOLTAGE ((uint32_t)0UL)
+#define MIN_CURRENT ((uint32_t)0UL)
+#define MIN_TEMP ((uint32_t)0UL)
+#define MAX_SPEED ((uint32_t)1000UL)
+#define MIN_SPEED ((uint32_t)0UL)
+#define MAX_TORQUE ((uint32_t)100UL)
+#define MIN_TORQUE ((uint32_t)0UL)
+#define MAX_POWER ((uint32_t)10000UL)
+#define MIN_POWER ((uint32_t)0UL)
+#define INIT_FAULT_WORD ((uint32_t)0x0000UL)
+#define TRUE ((uint32_t)1==1)
+#define FALSE ((uint32_t)1==0)
 
 // Type definitions
 typedef struct {
@@ -65,5 +74,7 @@ void display_motor_info(tu_Motor motor);
 void check_motor_faults(tu_Motor motor, tu_fault_word *fault_word);
 
 void motor_init(tu_Motor *motor);
+
+void manage_faults(tu_Motor* motor, tu_fault_word *fault_word);
 
 #endif //MAIN_H

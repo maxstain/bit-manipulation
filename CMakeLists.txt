@@ -10,4 +10,6 @@ add_executable(bit_manipulations main.c
         Motor/display_motor_info.c
         headers/display_motor_info.h
         Motor/motor_init.c
-        headers/motor_init.h)
+        headers/motor_init.h
+        Motor/manage_faults.c
+        headers/manage_faults.h)
