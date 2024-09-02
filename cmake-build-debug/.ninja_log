@@ -24,3 +24,7 @@
 22	927	7469713538067584	CMakeFiles/bit_manipulations.dir/main.c.obj	71e8701982ba042d
 183	1004	7469713538878826	CMakeFiles/bit_manipulations.dir/Motor/manage_faults.c.obj	e215084e73f5f804
 1005	3016	7469713557673844	bit_manipulations.exe	1f094add316988fc
+11	2623	7469974761249315	CMakeFiles/bit_manipulations.dir/Motor/display_motor_info.c.obj	496c95d40734d748
+2624	3719	7469974772009172	bit_manipulations.exe	1f094add316988fc
+6	349	7469974927224986	CMakeFiles/bit_manipulations.dir/Motor/display_motor_info.c.obj	496c95d40734d748
+350	776	7469974931354349	bit_manipulations.exe	1f094add316988fc
