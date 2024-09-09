@@ -1,9 +1,14 @@
 #include "headers/main.h"
 
+tu_Motor motor;
+tu_IP_address IP_address;
+
 int main(void) {
 	tu_fault_word fault_word;
 	
-	tu_Motor motor;
+	ETH_prepare_package(&IP_address);
+	
+	ETH_establish_connection(&motor);
 	
 	motor_init(&motor);
 	while (TRUE) {

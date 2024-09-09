@@ -12,6 +12,8 @@
 #include "check_motor_fault.h"
 #include "display_motor_info.h"
 #include "motor_init.h"
+#include "manage_faults.h"
+#include "ETH_public.h"
 
 // Constants
 #define MAX_VOLTAGE ((uint32_t)100UL)
@@ -43,6 +45,7 @@ typedef struct {
 typedef union {
 	uint32_t R;
 	ts_Motor_u_bit u_bit;
+	ethernet_package u_package;
 } tu_Motor;
 
 typedef struct {
@@ -75,6 +78,18 @@ void check_motor_faults(tu_Motor motor, tu_fault_word *fault_word);
 
 void motor_init(tu_Motor *motor);
 
-void manage_faults(tu_Motor* motor, tu_fault_word *fault_word);
+void manage_faults(tu_Motor *motor, tu_fault_word *fault_word);
+
+tu_IP_address *ETH_prepare_package(tu_IP_address *dest_IP);
+
+tu_IP_address get_IP_address(void);
+
+void ETH_connection_info(void);
+
+int ETH_establish_connection(tu_Motor *motor);
+
+extern tu_IP_address IP_address;
+extern tu_Motor motor;
+
 
 #endif //MAIN_H

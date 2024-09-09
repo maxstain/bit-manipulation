@@ -12,4 +12,8 @@ add_executable(bit_manipulations main.c
         Motor/motor_init.c
         headers/motor_init.h
         Motor/manage_faults.c
-        headers/manage_faults.h)
+        headers/manage_faults.h
+        headers/ETH_public.h
+        Ethernet/ETH_prepare_package.c
+        Ethernet/ETH_establish_connection.c
+        Ethernet/ETH_connection_info.c)
