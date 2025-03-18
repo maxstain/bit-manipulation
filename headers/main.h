@@ -71,25 +71,118 @@ typedef union {
 	ts_fault_word_u_bit u_bit;
 } tu_fault_word;
 
+typedef struct {
+	unsigned int bit31: 1;
+	unsigned int bit30: 1;
+	unsigned int bit29: 1;
+	unsigned int bit28: 1;
+	unsigned int bit27: 1;
+	unsigned int bit26: 1;
+	unsigned int bit25: 1;
+	unsigned int bit24: 1;
+	unsigned int bit23: 1;
+	unsigned int bit22: 1;
+	unsigned int bit21: 1;
+	unsigned int bit20: 1;
+	unsigned int bit19: 1;
+	unsigned int bit18: 1;
+	unsigned int bit17: 1;
+	unsigned int bit16: 1;
+	unsigned int bit15: 1;
+	unsigned int bit14: 1;
+	unsigned int bit13: 1;
+	unsigned int bit12: 1;
+	unsigned int bit11: 1;
+	unsigned int bit10: 1;
+	unsigned int bit09: 1;
+	unsigned int bit08: 1;
+	unsigned int bit07: 1;
+	unsigned int bit06: 1;
+	unsigned int bit05: 1;
+	unsigned int bit04: 1;
+	unsigned int bit03: 1;
+	unsigned int bit02: 1;
+	unsigned int bit01: 1;
+	unsigned int transmission_busy: 1; // Example bit
+	unsigned int FIFO_parity_error: 1; // Example bit
+	unsigned int invalid: 1; // Bit 0 renamed to invalid
+} FPGAStatusBits;
+
+// Define a union to hold the full word and the structure of bits for FPGA status register
+typedef union {
+	unsigned int fullWord;
+	FPGAStatusBits bits;
+} FPGAStatusRegister;
+
+// Define a structure to hold individual bits in big endian order for fault word register
+typedef struct {
+	unsigned int bit31: 1;
+	unsigned int bit30: 1;
+	unsigned int bit29: 1;
+	unsigned int bit28: 1;
+	unsigned int bit27: 1;
+	unsigned int bit26: 1;
+	unsigned int bit25: 1;
+	unsigned int bit24: 1;
+	unsigned int bit23: 1;
+	unsigned int bit22: 1;
+	unsigned int bit21: 1;
+	unsigned int bit20: 1;
+	unsigned int bit19: 1;
+	unsigned int bit18: 1;
+	unsigned int bit17: 1;
+	unsigned int bit16: 1;
+	unsigned int bit15: 1;
+	unsigned int bit14: 1;
+	unsigned int bit13: 1;
+	unsigned int bit12: 1;
+	unsigned int bit11: 1;
+	unsigned int bit10: 1;
+	unsigned int bit09: 1;
+	unsigned int bit08: 1;
+	unsigned int bit07: 1;
+	unsigned int bit06: 1;
+	unsigned int bit05: 1;
+	unsigned int bit04: 1;
+	unsigned int bit03: 1;
+	unsigned int bit02: 1;
+	unsigned int bit01: 1;
+	unsigned int invalid: 1; // Bit 0 renamed to invalid
+} FaultBits;
+
+// Define a union to hold the full word and the structure of bits for fault word register
+typedef union {
+	unsigned int fullWord;
+	FaultBits bits;
+} FaultRegister;
+
 // Function prototypes
-void display_motor_info(tu_Motor motor);
+extern void display_motor_info(tu_Motor motor);
 
-void check_motor_faults(tu_Motor motor, tu_fault_word *fault_word);
+extern void check_motor_faults(tu_Motor motor, tu_fault_word *fault_word);
 
-void motor_init(tu_Motor *motor);
+extern void motor_init(tu_Motor *motor);
 
-void manage_faults(tu_Motor *motor, tu_fault_word *fault_word);
+extern void manage_faults(tu_Motor *motor, tu_fault_word *fault_word);
 
-tu_IP_address *ETH_prepare_package(tu_IP_address *dest_IP);
+extern tu_IP_address *ETH_prepare_package(tu_IP_address *dest_IP);
 
-tu_IP_address get_IP_address(void);
+extern tu_IP_address get_IP_address(void);
 
-void ETH_connection_info(void);
+extern void ETH_connection_info(void);
 
-int ETH_establish_connection(tu_Motor *motor);
+extern int ETH_establish_connection(tu_Motor *motor);
+
+extern void readFPGAStatus(FPGAStatusRegister *fpga_Status, FaultRegister *faults);
+
+extern void checkFaults(FaultRegister faults);
 
 extern tu_IP_address IP_address;
 extern tu_Motor motor;
+
+extern FPGAStatusRegister fpgaStatus;
+
+extern FaultRegister componentFaults;
 
 
 #endif //MAIN_H

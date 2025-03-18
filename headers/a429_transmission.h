@@ -1,0 +1,10 @@
+//
+// Created by fchabcho on 19/03/2025.
+//
+
+#ifndef BIT_MANIPULATIONS_A429_TRANSMISSION_H
+#define BIT_MANIPULATIONS_A429_TRANSMISSION_H
+
+#include "main.h"
+
+#endif //BIT_MANIPULATIONS_A429_TRANSMISSION_H

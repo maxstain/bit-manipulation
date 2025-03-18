@@ -2,9 +2,19 @@
 
 tu_Motor motor;
 tu_IP_address IP_address;
+FPGAStatusRegister fpgaStatus;
+FaultRegister componentFaults;
 
 int main(void) {
 	tu_fault_word fault_word;
+	
+	fpgaStatus.fullWord = 0xAAAAAAAA;
+	componentFaults.fullWord = 0xBBBBFFBB;
+	
+	readFPGAStatus(&fpgaStatus, &componentFaults);
+	checkFaults(componentFaults);
+	
+	printf_s("Invalid Bit: %u", componentFaults.bits.invalid);
 	
 	ETH_prepare_package(&IP_address);
 	

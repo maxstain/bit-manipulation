@@ -16,4 +16,6 @@ add_executable(bit_manipulations main.c
         headers/ETH_public.h
         Ethernet/ETH_prepare_package.c
         Ethernet/ETH_establish_connection.c
-        Ethernet/ETH_connection_info.c)
+        Ethernet/ETH_connection_info.c
+        Transmission/transmission.c
+        headers/a429_transmission.h)
